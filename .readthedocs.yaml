@@ -7,5 +7,4 @@ build:
     pre_build:
       - pip install -U pip
       - conda env create -f environment.yml
-    build:
-      - "conda run -n computing-in-context jupyter-book build ."
+      - conda run -n computing-in-context jupyter-book build .
