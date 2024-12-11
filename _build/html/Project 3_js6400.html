@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project 3 &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Project 3_js6400';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Project 2" href="Project%202_js6400.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Welcome to Juhi’s Website!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Project%201_js6400.html">Project 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project%202_js6400.html">Project 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 3</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Project 3_js6400.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-and-cleaning-the-datasets">Uploading and Cleaning the Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-languages-in-indian-states"><strong>Dataset 1: Languages in Indian States</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-literacy-in-india"><strong>Dataset 2: Literacy in India</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-datasets"><strong>Merging Datasets</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-visualization">Data Analysis &amp; Visualization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplot"><strong>Scatterplot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-plot"><strong>Regression Plot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-charts"><strong>Bar Charts</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bubble-chart"><strong>Bubble Chart</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-takeaways">Overall Takeaways:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-3">
+<h1>Project 3<a class="headerlink" href="#project-3" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><strong>Datasets to be used:</strong></p>
+<ul>
+<li><p><strong>Languages in Indian States:</strong> Translators without Borders (2020). Language and literacy data from the Office of the Registrar General &amp; Census Commissioner, India (2011 Census). Accessed on November 22, 2024. Available here: <a class="reference external" href="https://data.humdata.org/dataset/61a9df6a-c1fa-4885-9c3f-e00666ec859c/resource/a6a31c2f-20a9-4f25-81f6-12ae60000bcd/download/in_lang_admin1_v01.csv">https://data.humdata.org/dataset/61a9df6a-c1fa-4885-9c3f-e00666ec859c/resource/a6a31c2f-20a9-4f25-81f6-12ae60000bcd/download/in_lang_admin1_v01.csv</a>.</p></li>
+<li><p><strong>Literacy in India:</strong> Satyam Prasad Tiwari (2020). India Literacy Data - District Wise. Accessed November 22, 2024. Available here: Downloads/archive.zip
+<a class="reference external" href="https://www.kaggle.com/api/v1/datasets/download/satyampd/india-literacy-data-district-wise">https://www.kaggle.com/api/v1/datasets/download/satyampd/india-literacy-data-district-wise</a></p></li>
+</ul>
+</li>
+<li><p><strong>Analysis question:</strong> Do states with larger populations, speaking a specific dominant language, have higher literacy rates?</p></li>
+<li><p><strong>Columns that will be used:</strong> States, Population Size, Language spoken</p></li>
+<li><p><strong>Column to be used to merge datasets:</strong> States</p></li>
+<li><p><strong>Hypothesis:</strong> States with larger populations speaking a specific dominant language have higher literacy rates because more populous states may have better access to resources, infrastructure, and educational materials tailored to their dominant language.</p></li>
+<li><p><strong>Assistance:</strong> I ran my codes through chatGPT and amended them accordingly.</p></li>
+<li><p><strong>Site URL:</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>seaborn
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (2.2.3)
+Requirement already satisfied: matplotlib in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (3.9.3)
+Requirement already satisfied: seaborn in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (0.13.2)
+Requirement already satisfied: numpy&gt;=1.26.0 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from pandas) (2.2.0)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from pandas) (2024.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from pandas) (2024.2)
+Requirement already satisfied: contourpy&gt;=1.0.1 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from matplotlib) (1.3.1)
+Requirement already satisfied: cycler&gt;=0.10 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from matplotlib) (4.55.3)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from matplotlib) (1.4.7)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from matplotlib) (24.2)
+Requirement already satisfied: pillow&gt;=8 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from matplotlib) (11.0.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from matplotlib) (3.2.0)
+Requirement already satisfied: six&gt;=1.5 in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="uploading-and-cleaning-the-datasets">
+<h2>Uploading and Cleaning the Datasets<a class="headerlink" href="#uploading-and-cleaning-the-datasets" title="Link to this heading">#</a></h2>
+<section id="dataset-1-languages-in-indian-states">
+<h3><strong>Dataset 1: Languages in Indian States</strong><a class="headerlink" href="#dataset-1-languages-in-indian-states" title="Link to this heading">#</a></h3>
+<p>This dataset details the linguistic diversity in India. For this project, I chose to work with the columns State, State Language, and State Population. The data is based on last conducted census in India.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">language_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;C:/Users/joosa/OneDrive/Desktop/in_lang_admin1_v01.csv&quot;</span><span class="p">)</span>
+
+<span class="n">columns_keep</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;admin1_name&quot;</span><span class="p">,</span> <span class="s2">&quot;main_language&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_total&quot;</span><span class="p">]</span>
+
+<span class="n">language_df</span> <span class="o">=</span> <span class="n">language_df</span><span class="p">[</span><span class="n">columns_keep</span><span class="p">]</span>
+
+<span class="n">new_columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;admin1_name&quot;</span><span class="p">:</span> <span class="s2">&quot;State&quot;</span><span class="p">,</span> <span class="s2">&quot;main_language&quot;</span><span class="p">:</span> <span class="s2">&quot;State Language&quot;</span><span class="p">,</span> <span class="s2">&quot;pop_total&quot;</span><span class="p">:</span> <span class="s2">&quot;State Population&quot;</span><span class="p">}</span>
+
+<span class="n">language_df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_columns</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">language_df</span> <span class="o">=</span> <span class="n">language_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span>
+    <span class="s2">&quot;nct of delhi&quot;</span><span class="p">:</span> <span class="s2">&quot;delhi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;odisha&quot;</span><span class="p">:</span> <span class="s2">&quot;orissa&quot;</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">,</span> <span class="s2">&quot;and&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State Population&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span>
+    <span class="n">language_df</span><span class="p">[</span><span class="s2">&quot;State Population&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">language_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                          State State Language  State Population
+1   andaman and nicobar islands        Bengali            380581
+2                andhra pradesh         Telugu          84580777
+3             arunachal pradesh          Nissi           1383727
+4                         assam       Assamese          31205576
+5                         bihar          Hindi         104099452
+6                    chandigarh          Hindi           1055450
+7                  chhattisgarh          Hindi          25545198
+8        dadra and nagar haveli          Bhili            343709
+9                 daman and diu       Gujarati            243247
+10                          goa        Konkani           1458545
+11                      gujarat       Gujarati          60439692
+12                      haryana          Hindi          25351462
+13             himachal pradesh          Hindi           6864602
+14            jammu and kashmir       Kashmiri          12541302
+15                    jharkhand          Hindi          32988134
+16                    karnataka        Kannada          61095297
+17                       kerala      Malayalam          33406061
+18                  lakshadweep      Malayalam             64473
+19               madhya pradesh          Hindi          72626809
+20                  maharashtra        Marathi         112374333
+21                      manipur       Manipuri           2855794
+22                    meghalaya          Khasi           2966889
+23                      mizoram         Lushai           1097206
+24                     nagaland         Konyak           1978502
+25                        delhi          Hindi          16787941
+26                       orissa           Odia          41974218
+27                   puducherry          Tamil           1247953
+28                       punjab        Punjabi          27743338
+29                    rajasthan          Hindi          68548437
+30                       sikkim         Nepali            610577
+31                   tamil nadu          Tamil          72147030
+32                      tripura        Bengali           3673917
+33                uttar pradesh          Hindi         199812341
+34                  uttarakhand          Hindi          10086292
+35                  west bengal        Bengali          91276115
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dataset-2-literacy-in-india">
+<h3><strong>Dataset 2: Literacy in India</strong><a class="headerlink" href="#dataset-2-literacy-in-india" title="Link to this heading">#</a></h3>
+<p>This dataset details the literacy rate across Indian states. For this project, I worked with the columns State and Literacy. The data is based on the last conducted census in India, that is, 2011.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">literacy_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;C:/Users/joosa/OneDrive/Desktop/Literacy Data 2011.csv&quot;</span><span class="p">)</span>
+
+<span class="n">columns_to_keep</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">,</span> <span class="s2">&quot;Literacy&quot;</span><span class="p">]</span>
+
+<span class="n">literacy_df</span> <span class="o">=</span> <span class="n">literacy_df</span><span class="p">[</span><span class="n">columns_to_keep</span><span class="p">]</span>
+
+<span class="n">literacy_df</span> <span class="o">=</span> <span class="n">literacy_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">literacy_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">literacy_df</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">literacy_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                          State   Literacy
+0   andaman and nicobar islands  83.700000
+1                andhra pradesh  66.293913
+2             arunachal pradesh  63.861875
+3                         assam  72.247407
+4                         bihar  61.756316
+5                    chandigarh  86.050000
+6                  chhattisgarh  65.841667
+7        dadra and nagar haveli  76.240000
+8                 daman and diu  85.765000
+9                         delhi  86.556667
+10                          goa  88.580000
+11                      gujarat  76.389231
+12                      haryana  75.358571
+13             himachal pradesh  81.747500
+14            jammu and kashmir  65.377273
+15                    jharkhand  64.744583
+16                    karnataka  73.655667
+17                       kerala  93.695000
+18                  lakshadweep  91.850000
+19               madhya pradesh  67.683400
+20                  maharashtra  80.967143
+21                      manipur  76.360000
+22                    meghalaya  73.225714
+23                      mizoram  89.361250
+24                     nagaland  78.397273
+25                       orissa  70.839667
+26                   puducherry  87.457500
+27                       punjab  74.682500
+28                    rajasthan  64.600606
+29                       sikkim  80.167500
+30                   tamil nadu  79.337500
+31                      tripura  86.642500
+32                uttar pradesh  67.503380
+33                  uttarakhand  79.643077
+34                  west bengal  74.863684
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="merging-datasets">
+<h3><strong>Merging Datasets</strong><a class="headerlink" href="#merging-datasets" title="Link to this heading">#</a></h3>
+<p>I merged the datasets on the common column, that is, ‘State.’ I previously cleaned the two datasets accordingly to ensure uniformity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">literacy_and_language_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">language_df</span><span class="p">,</span> <span class="n">literacy_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">literacy_and_language_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                          State State Language  State Population   Literacy
+0   andaman and nicobar islands        Bengali            380581  83.700000
+1                andhra pradesh         Telugu          84580777  66.293913
+2             arunachal pradesh          Nissi           1383727  63.861875
+3                         assam       Assamese          31205576  72.247407
+4                         bihar          Hindi         104099452  61.756316
+5                    chandigarh          Hindi           1055450  86.050000
+6                  chhattisgarh          Hindi          25545198  65.841667
+7        dadra and nagar haveli          Bhili            343709  76.240000
+8                 daman and diu       Gujarati            243247  85.765000
+9                           goa        Konkani           1458545  88.580000
+10                      gujarat       Gujarati          60439692  76.389231
+11                      haryana          Hindi          25351462  75.358571
+12             himachal pradesh          Hindi           6864602  81.747500
+13            jammu and kashmir       Kashmiri          12541302  65.377273
+14                    jharkhand          Hindi          32988134  64.744583
+15                    karnataka        Kannada          61095297  73.655667
+16                       kerala      Malayalam          33406061  93.695000
+17                  lakshadweep      Malayalam             64473  91.850000
+18               madhya pradesh          Hindi          72626809  67.683400
+19                  maharashtra        Marathi         112374333  80.967143
+20                      manipur       Manipuri           2855794  76.360000
+21                    meghalaya          Khasi           2966889  73.225714
+22                      mizoram         Lushai           1097206  89.361250
+23                     nagaland         Konyak           1978502  78.397273
+24                        delhi          Hindi          16787941  86.556667
+25                       orissa           Odia          41974218  70.839667
+26                   puducherry          Tamil           1247953  87.457500
+27                       punjab        Punjabi          27743338  74.682500
+28                    rajasthan          Hindi          68548437  64.600606
+29                       sikkim         Nepali            610577  80.167500
+30                   tamil nadu          Tamil          72147030  79.337500
+31                      tripura        Bengali           3673917  86.642500
+32                uttar pradesh          Hindi         199812341  67.503380
+33                  uttarakhand          Hindi          10086292  79.643077
+34                  west bengal        Bengali          91276115  74.863684
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="data-analysis-visualization">
+<h2>Data Analysis &amp; Visualization<a class="headerlink" href="#data-analysis-visualization" title="Link to this heading">#</a></h2>
+<p>For the purposes of my hypothesis and analysis question, I relied on 4 different types of data visualization methods.</p>
+<ul class="simple">
+<li><p><strong>Scatterplot:</strong> to identify potential trends across the languages.</p></li>
+<li><p><strong>Regression plot:</strong> to quantify the correlation between state population and language, while also indicating the variability.</p></li>
+<li><p><strong>Bar Chart:</strong> to comparison of average literacy rates across different State Languages.</p></li>
+<li><p><strong>Bubble Chart:</strong> to analyze the combined effect of population size and literacy rates, while grouping them visually by the language spoken.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">plotly</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting plotly
+  Using cached plotly-5.24.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting tenacity&gt;=6.2.0 (from plotly)
+  Using cached tenacity-9.0.0-py3-none-any.whl.metadata (1.2 kB)
+Requirement already satisfied: packaging in c:\users\joosa\anaconda3\abc\envs\computing_in_context_project\lib\site-packages (from plotly) (24.2)
+Using cached plotly-5.24.1-py3-none-any.whl (19.1 MB)
+Using cached tenacity-9.0.0-py3-none-any.whl (28 kB)
+Installing collected packages: tenacity, plotly
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<section id="scatterplot">
+<h3><strong>Scatterplot</strong><a class="headerlink" href="#scatterplot" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This scatterplot explores the association between a State’s population size and its’ literacy rate.</p></li>
+<li><p>There is no linear relation that can be observed between the population size and literacy rate, indicative of a wide variability.</p></li>
+<li><p>Bihar and Uttar Pradesh, both Hindi-speaking states, cluster at the lower end of literacy rates despite large populations.</p></li>
+<li><p>Kerala, a Malayalam-speaking state, stands out with a high literacy rate despite having a relatively smaller population.</p></li>
+<li><p>Variability among Hindi-speaking states further suggests that other factors like infrastructure, governance at a state level etc. play a significant role.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">literacy_and_language_df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;State Population&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Literacy&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;State Population&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;State Language&quot;</span><span class="p">,</span>
+    <span class="n">hover_name</span><span class="o">=</span><span class="s2">&quot;State&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Interactive Scatter Plot: Population vs Literacy Rate&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;State Population&quot;</span><span class="p">:</span> <span class="s2">&quot;Population&quot;</span><span class="p">,</span> <span class="s2">&quot;Literacy&quot;</span><span class="p">:</span> <span class="s2">&quot;Literacy (%)&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</section>
+<section id="regression-plot">
+<h3><strong>Regression Plot</strong><a class="headerlink" href="#regression-plot" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Languages such as Konkani and Malayalam, associated with smaller states (e.g., Kerala, Goa), show nearly flat regression lines, suggesting little or no correlation between population size and literacy rate in these regions.</p></li>
+<li><p>On the other hand, States (like, Uttar Pradesh and Maharashtra) significantly influence regression lines, leading to exaggerated slopes.</p></li>
+<li><p>Hindi speaking states exhibit wide variablity, where some States with smaller population sizes (like, Haryana) have a relatively high rate fo literacy in comparison to other States with bigger population sizes.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting scikit-learn
+  Downloading scikit_learn-1.6.0-cp312-cp312-win_amd64.whl.metadata (15 kB)
+Requirement already satisfied: numpy&gt;=1.19.5 in c:\users\joosa\anaconda3\abc\envs\project_3\lib\site-packages (from scikit-learn) (2.2.0)
+Collecting scipy&gt;=1.6.0 (from scikit-learn)
+  Downloading scipy-1.14.1-cp312-cp312-win_amd64.whl.metadata (60 kB)
+Collecting joblib&gt;=1.2.0 (from scikit-learn)
+  Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl&gt;=3.1.0 (from scikit-learn)
+  Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Downloading scikit_learn-1.6.0-cp312-cp312-win_amd64.whl (11.1 MB)
+   ---------------------------------------- 0.0/11.1 MB ? eta -:--:--
+   ---------- ----------------------------- 2.9/11.1 MB 15.2 MB/s eta 0:00:01
+   ---------------------- ----------------- 6.3/11.1 MB 15.5 MB/s eta 0:00:01
+   --------------------------------- ------ 9.4/11.1 MB 15.5 MB/s eta 0:00:01
+   ---------------------------------------- 11.1/11.1 MB 14.8 MB/s eta 0:00:00
+Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+Downloading scipy-1.14.1-cp312-cp312-win_amd64.whl (44.5 MB)
+   ---------------------------------------- 0.0/44.5 MB ? eta -:--:--
+   -- ------------------------------------- 2.6/44.5 MB 15.1 MB/s eta 0:00:03
+   ---- ----------------------------------- 5.5/44.5 MB 13.4 MB/s eta 0:00:03
+   -------- ------------------------------- 9.2/44.5 MB 14.6 MB/s eta 0:00:03
+   ----------- ---------------------------- 12.3/44.5 MB 14.9 MB/s eta 0:00:03
+   ------------- -------------------------- 15.5/44.5 MB 15.0 MB/s eta 0:00:02
+   ---------------- ----------------------- 18.9/44.5 MB 15.1 MB/s eta 0:00:02
+   ------------------- -------------------- 22.0/44.5 MB 15.1 MB/s eta 0:00:02
+   ---------------------- ----------------- 25.4/44.5 MB 15.2 MB/s eta 0:00:02
+   ------------------------- -------------- 28.6/44.5 MB 15.1 MB/s eta 0:00:02
+   ---------------------------- ----------- 31.7/44.5 MB 15.1 MB/s eta 0:00:01
+   ------------------------------- -------- 35.1/44.5 MB 15.3 MB/s eta 0:00:01
+   ---------------------------------- ----- 38.5/44.5 MB 15.3 MB/s eta 0:00:01
+   ------------------------------------- -- 41.7/44.5 MB 15.3 MB/s eta 0:00:01
+   ---------------------------------------  44.3/44.5 MB 15.2 MB/s eta 0:00:01
+   ---------------------------------------- 44.5/44.5 MB 14.7 MB/s eta 0:00:00
+Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn
+Successfully installed joblib-1.4.2 scikit-learn-1.6.0 scipy-1.14.1 threadpoolctl-3.5.0
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">languages</span> <span class="o">=</span> <span class="n">literacy_and_language_df</span><span class="p">[</span><span class="s2">&quot;State Language&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
+
+    <span class="n">lang_data</span> <span class="o">=</span> <span class="n">literacy_and_language_df</span><span class="p">[</span><span class="n">literacy_and_language_df</span><span class="p">[</span><span class="s2">&quot;State Language&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">language</span><span class="p">]</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">lang_data</span><span class="p">[</span><span class="s2">&quot;State Population&quot;</span><span class="p">],</span>
+        <span class="n">y</span><span class="o">=</span><span class="n">lang_data</span><span class="p">[</span><span class="s2">&quot;Literacy&quot;</span><span class="p">],</span>
+        <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> - Data&quot;</span><span class="p">,</span>
+        <span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">lang_data</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span>
+    <span class="p">))</span>
+
+    <span class="n">X</span> <span class="o">=</span> <span class="n">lang_data</span><span class="p">[</span><span class="s2">&quot;State Population&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">lang_data</span><span class="p">[</span><span class="s2">&quot;Literacy&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> 
+        <span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">lang_data</span><span class="p">[</span><span class="s2">&quot;State Population&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;lines&#39;</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> - Regression&quot;</span><span class="p">,</span>
+            <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">dash</span><span class="o">=</span><span class="s1">&#39;dash&#39;</span><span class="p">)</span>
+        <span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Interactive Regression Plot: Population vs Literacy Rate&quot;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;State Population&quot;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Literacy Rate (%)&quot;</span><span class="p">,</span>
+    <span class="n">legend_title</span><span class="o">=</span><span class="s2">&quot;Legend&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;plotly_white&quot;</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</section>
+<section id="bar-charts">
+<h3><strong>Bar Charts</strong><a class="headerlink" href="#bar-charts" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This bar chart indicates the literacy rates for each State language.</p></li>
+<li><p>While some dominant languages like Malayalam and Tamil are linked with high literacy, others such as Hindi and Nissi exhibit variability.</p></li>
+<li><p>It shows that literacy is influenced by state-specific factors rather than the language alone.</p></li>
+<li><p>For example, in Kerala (Malayalam) and Tamil Nadu (Tamil) reflect strong regional education systems.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">average_literacy</span> <span class="o">=</span> <span class="n">literacy_and_language_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;State Language&quot;</span><span class="p">,</span> <span class="s2">&quot;State&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;Literacy&quot;</span><span class="p">:</span> <span class="s2">&quot;mean&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">average_literacy</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;State&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Literacy&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;State Language&quot;</span><span class="p">,</span> 
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Interactive Bar Chart: Average Literacy Rate by State&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Literacy&quot;</span><span class="p">:</span> <span class="s2">&quot;Literacy Rate (%)&quot;</span><span class="p">,</span> <span class="s2">&quot;State&quot;</span><span class="p">:</span> <span class="s2">&quot;State Name&quot;</span><span class="p">},</span>
+    <span class="n">color_continuous_scale</span><span class="o">=</span><span class="s2">&quot;Viridis&quot;</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s2">&quot;State Name&quot;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Average Literacy Rate (%)&quot;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;plotly_white&quot;</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">tickangle</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</section>
+<section id="bubble-chart">
+<h3><strong>Bubble Chart</strong><a class="headerlink" href="#bubble-chart" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The bubble chart combines population and the literacy rates for each Indian state.</p></li>
+<li><p>Uttar Pradesh, with the largest population, has a relatively low literacy rate, whereas states like Kerala and Maharashtra, with smaller populations compared to Uttar Pradesh, exhibit significantly higher literacy rates.</p></li>
+<li><p>The hypothesis is potentially challenged with this data and indicative that larger populations may not inherently lead to higher literacy.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">literacy_and_language_df</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;State Population&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Literacy&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;State Population&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;State Language&quot;</span><span class="p">,</span>
+    <span class="n">hover_name</span><span class="o">=</span><span class="s2">&quot;State&quot;</span><span class="p">,</span> 
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Interactive Bubble Chart: Population vs Literacy Rate&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;State Population&quot;</span><span class="p">:</span> <span class="s2">&quot;Population&quot;</span><span class="p">,</span> <span class="s2">&quot;Literacy&quot;</span><span class="p">:</span> <span class="s2">&quot;Literacy Rate (%)&quot;</span><span class="p">},</span>
+    <span class="n">size_max</span><span class="o">=</span><span class="mi">60</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</section>
+</section>
+<section id="overall-takeaways">
+<h2>Overall Takeaways:<a class="headerlink" href="#overall-takeaways" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>On the whole, the data suggests that while the language spoken in a State and its population size have an impact on literacy rates, there are other determinants of literacy as well, which perhaps have a bigger impact.</p></li>
+<li><p>These other determinants could include State laws and policies, socio-economic conditions, gender disparities etc.</p></li>
+<li><p>The hypothesis is only partially supported, with states like Kerala, Lakshadweep, Uttar Pradesh etc. being excpetions and further highlighting the complexity of the relationship.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Project%202_js6400.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Project 2</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-and-cleaning-the-datasets">Uploading and Cleaning the Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-1-languages-in-indian-states"><strong>Dataset 1: Languages in Indian States</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-2-literacy-in-india"><strong>Dataset 2: Literacy in India</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-datasets"><strong>Merging Datasets</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-analysis-visualization">Data Analysis &amp; Visualization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplot"><strong>Scatterplot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-plot"><strong>Regression Plot</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-charts"><strong>Bar Charts</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bubble-chart"><strong>Bubble Chart</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-takeaways">Overall Takeaways:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

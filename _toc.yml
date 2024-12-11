@@ -1,0 +1,7 @@
+format: jb-book
+root: index
+
+chapters:
+  - file: Project 1_js6400
+  - file: Project 2_js6400
+  - file: Project 3_js6400
